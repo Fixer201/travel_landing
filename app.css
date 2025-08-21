@@ -297,11 +297,10 @@ main {
     transition: transform .4s, box-shadow .4s, border .4s, transform .4s, filter .8s;
     border: 2px solid var(--color-merino-50);
     pointer-events: auto;
-
 }
 
 .gallery__item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 0 30px 10px var(--color-dark-blue-400);
     border: 2px solid var(--color-dark-blue-500);
     filter: brightness(0.9) contrast(1.2);
@@ -310,6 +309,123 @@ main {
 .gallery__items:hover .gallery__item:not(:hover) {
     filter: grayscale(0.4) blur(6px);
     transform: scale(0.95);
+}
+
+/* Pricing Section */
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--color-merino-300);
+}
+
+.pricing__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 3rem 4rem;
+    justify-items: center;
+    transition: filter 0.4s;
+    pointer-events: none;
+
+}
+
+.pricing__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    max-width: 450px;
+    min-height: 500px;
+    background-color: var(--color-dark-blue-900);
+    border: 2px solid var(--color-dark-blue-900);
+    border-radius: 12px;
+    padding: 2em;
+    color: var(--color-merino-50);
+    box-shadow: 0 0 20px 4px var(--color-dark-blue-600);
+    transition: background-color 0.4s, border-radius 0.4s linear, box-shadow 0.4s, filter 0.4s, transform 0.5s;
+    pointer-events: auto;
+}
+
+.pricing__item:hover {
+    background-color: var(--color-merino-500);
+    border-radius: 12px 96px;
+    transform: scale(1.05);
+    box-shadow: 0 0 35px 15px var(--color-merino-600);
+}
+
+.pricing__item:hover .pricing__item-title {
+    color: var(--color-dark-blue-600);
+    transition: color 0.4s;
+}
+
+.pricing__wrapper:hover .pricing__item:not(:hover) {
+    transform: scale(0.95);
+}
+
+.pricing__item:hover .pricing__item-price {
+    color: var(--color-merino-50);
+    font-size: 2.5rem;
+}
+
+.pricing__item:hover .pricing__item-features {
+    font-size: 1.3rem;
+    transition: color 0.4s, font-size 0.4s;
+}
+
+
+.pricing__item-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    transition: transform 0.4s, filter 0.4s;
+}
+
+.pricing__item-icon:hover {
+    transform: scale(1.2);
+    animation: blink 2s infinite;
+}
+
+.pricing__item-title {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 3em;
+    color: var(--color-merino-50);
+    text-align: center;
+    transition: color 0.4s;
+}
+
+.pricing__item-price {
+    font-size: 2rem;
+    color: var(--color-merino-200);
+    text-align: center;
+    line-height: 1.5;
+    transition: color 0.4s, font-size 0.4s;
+}
+
+.pricing__item-features {
+    font-size: 1.2rem;
+    color: var(--color-merino-50);
+    text-align: start;
+    line-height: 1.5;
+    transition: color 0.4s, font-size 0.4s;
+}
+
+.pricing__item-features li {
+    list-style: circle;
+    margin: 0.5rem 0;
+}
+
+.pricing__item .primary-button {
+    width: 90%;
+    height: 75px;
+    max-width: 250px;
+    font-size: 1.2rem;
+    margin-top: auto;
 }
 
 /* Share Section Classes */
@@ -495,3 +611,16 @@ main {
     transition: color 0.3s, font-size 0.5s;
 }
 
+
+/* Animations */
+@keyframes blink {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.5);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
