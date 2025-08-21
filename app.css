@@ -212,6 +212,7 @@ main > section:nth-child(even) {
     height: 100%;
     justify-items: center;
     align-content: center;
+    max-width: 1600px;
 }
 
 .achievement {
@@ -296,6 +297,7 @@ main > section:nth-child(even) {
     column-fill: balance;
     overflow: hidden;
     pointer-events: none;
+    max-width: 1600px;
 }
 
 .gallery__item {
@@ -334,6 +336,7 @@ main > section:nth-child(even) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     width: 100%;
+    max-width: 1600px;
     padding: 3rem 4rem;
     justify-items: center;
     transition: filter 0.4s;
