@@ -57,6 +57,7 @@ header {
     border-bottom: 2px solid var(--color-dark-blue-950);
     color: var(--color-dark-blue-50);
     font-size: 1.5rem;
+    z-index: 1000;
 }
 
 .header__logo-link {
@@ -102,6 +103,7 @@ main {
     width: 100%;
 }
 
+/* Hero */
 .hero {
     height: clamp(80vh, 50vw, 99vh);
     width: 100%;
@@ -190,35 +192,6 @@ main {
     background-color: var(--color-merino-300);
 }
 
-.achievements__header {
-    display: flex;
-    width: 100%;
-    border-top: 2px solid var(--color-dark-blue-800);
-    border-bottom: 2px solid var(--color-dark-blue-800);
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-}
-
-.achievements__header:hover {
-    background-color: var(--color-merino-50);
-    transition: background-color 0.4s;
-}
-
-.achievements__header:hover .achievements__title {
-    color: var(--color-merino-600);
-    transition: color 0.5s ease;
-}
-
-.achievements__title {
-    font-family: "Julius Sans One", sans-serif;
-    padding: .5em;
-    font-size: 4rem;
-    color: var(--color-dark-blue-500);
-    transition: color 0.3s;
-}
-
-
 .achievements__wrapper {
     display: grid;
     width: 100%;
@@ -295,6 +268,79 @@ main {
     font-size: 1.5em;
     transition: color 0.4s, font-size .4s;
 }
+
+/* Gallery Section */
+
+.gallery {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--color-merino-600);
+}
+
+.gallery__items {
+    column-count: 3;
+    padding: 2rem 4rem;
+    gap: 2rem;
+    column-fill: balance;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.gallery__item {
+    break-inside: avoid;
+    margin: 1rem;
+    width: 100%;
+    border-radius: 24px;
+    transition: transform .4s, box-shadow .4s, border .4s, transform .4s, filter .8s;
+    border: 2px solid var(--color-merino-50);
+    pointer-events: auto;
+
+}
+
+.gallery__item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px 10px var(--color-dark-blue-400);
+    border: 2px solid var(--color-dark-blue-500);
+    filter: brightness(0.9) contrast(1.2);
+}
+
+.gallery__items:hover .gallery__item:not(:hover) {
+    filter: grayscale(0.4) blur(6px);
+    transform: scale(0.95);
+}
+
+/* Share Section Classes */
+.section__header {
+    display: flex;
+    width: 100%;
+    border-top: 2px solid var(--color-dark-blue-800);
+    border-bottom: 2px solid var(--color-dark-blue-800);
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.section__header:hover {
+    background-color: var(--color-merino-50);
+    transition: background-color 0.4s;
+}
+
+.section__header:hover .section__title {
+    color: var(--color-merino-600);
+    transition: color 0.5s ease;
+}
+
+.section__title {
+    font-family: "Julius Sans One", sans-serif;
+    padding: .5em;
+    font-size: 4rem;
+    color: var(--color-dark-blue-500);
+    transition: color 0.3s;
+}
+
 
 /* Buttons */
 
