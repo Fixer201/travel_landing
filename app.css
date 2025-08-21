@@ -441,6 +441,74 @@ main > section:nth-child(even) {
     margin-top: auto;
 }
 
+/* Team Section */
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.team__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1600px;
+    padding: 3rem 4rem;
+    justify-items: center;
+}
+
+.team__member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+    min-height: 350px;
+    background-color: var(--color-merino-200);
+    border: 2px solid var(--color-merino-600);
+    border-radius: 12px;
+    padding: 2em;
+    color: var(--color-dark-blue-900);
+    box-shadow: 0 0 20px 4px var(--color-merino-200);
+    transition: border-radius 0.4s, transform 0.4s, box-shadow 0.4s;
+}
+
+.team__member:hover {
+    border-radius: 96px 12px 12px 12px;
+    transform: scale(1.05);
+    box-shadow: 0 0 35px 15px var(--color-merino-900);
+}
+
+.team__member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: transform 0.4s;
+}
+
+.team__member-photo:hover {
+    transform: scale(1.2);
+}
+
+.team__member-name {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 2em;
+    color: var(--color-dark-blue-950);
+    text-align: center;
+}
+
+.team__member-role {
+    font-size: 1.5em;
+    color: var(--color-dark-blue-950);
+    text-align: center;
+}
+
 /* Share Section Classes */
 .section__header {
     display: flex;
