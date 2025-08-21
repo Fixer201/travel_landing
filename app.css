@@ -103,6 +103,17 @@ main {
     width: 100%;
 }
 
+main > article:nth-child(odd),
+main > section:nth-child(odd) {
+    background-color: var(--color-merino-600);
+}
+
+main > article:nth-child(even),
+main > section:nth-child(even) {
+    background-color: var(--color-merino-300);
+}
+
+
 /* Hero */
 .hero {
     height: clamp(80vh, 50vw, 99vh);
@@ -189,7 +200,6 @@ main {
     justify-content: center;
     width: 100%;
     font-family: "Julius", sans-serif;
-    background-color: var(--color-merino-300);
 }
 
 .achievements__wrapper {
@@ -277,7 +287,6 @@ main {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    background-color: var(--color-merino-600);
 }
 
 .gallery__items {
@@ -318,7 +327,6 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: var(--color-merino-300);
 }
 
 .pricing__wrapper {
@@ -340,6 +348,7 @@ main {
     justify-content: space-evenly;
     gap: 1rem;
     width: 100%;
+    font-family: 'Montserrat', serif;
     max-width: 450px;
     min-height: 500px;
     background-color: var(--color-dark-blue-900);
@@ -370,11 +379,11 @@ main {
 
 .pricing__item:hover .pricing__item-price {
     color: var(--color-merino-50);
-    font-size: 2.5rem;
+    font-size: 2em;
 }
 
 .pricing__item:hover .pricing__item-features {
-    font-size: 1.3rem;
+    font-size: 1.3em;
     transition: color 0.4s, font-size 0.4s;
 }
 
@@ -408,8 +417,9 @@ main {
 }
 
 .pricing__item-features {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--color-merino-50);
+    padding: 0 1em;
     text-align: start;
     line-height: 1.5;
     transition: color 0.4s, font-size 0.4s;
